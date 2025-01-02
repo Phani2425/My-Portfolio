@@ -6,6 +6,8 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
+
+
 const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -47,56 +49,64 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16">
+    <section className="pb-16 lg:py-24">
       <div className="container">
-        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r  from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r  from-emerald-300 to-sky-400 bg-clip-text text-transparent text-center">
           real-world Results
         </p>
-        <h2 className="font-serif text-3xl text-center mt-6 ">
+        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 ">
           Featured Projects
         </h2>
-        <p className="text-center text-white/60 mt-4">
+        <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
           See how I transformed consepts into engaging digital experiences.
         </p>
-        <div className="flex flex-col mt-10 gap-20">
+        <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-3xl  relative after:content-[''] after:absolute after:inset-0 z-0 after:z-10 overflow-hidden after:outline-4 after:outline after:-outline-offset-[3px] after:rounded-3xl after:outline-white/20 px-8 pt-8 after:pointer-events-none"
+              className="bg-gray-800 rounded-3xl  relative after:content-[''] after:absolute after:inset-0 z-0 after:z-10 overflow-hidden after:outline-4 after:outline after:-outline-offset-[3px] after:rounded-3xl after:outline-white/20 px-8 pt-8  md:pt-12 md:px-10 lg:pt-16 lg:px-16 after:pointer-events-none "
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{ backgroundImage: `url(${grainImage.src})` }}
               ></div>
-              <div className="flex">
-                <div className="bg-gradient-to-r from bg-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest gap-2 text-sm text-transparent bg-clip-text ">
-                  <span>{project.company}</span>
-                  <span>&bull;</span>
-                  <span>{project.year}</span>
-                </div>
-              </div>
+              <div className="lg:flex lg:justify-between lg:gap-8">
+                <div>
+                  <div className="flex">
+                    <div className="bg-gradient-to-r from bg-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest gap-2 text-sm text-transparent bg-clip-text ">
+                      <span>{project.company}</span>
+                      <span>&bull;</span>
+                      <span>{project.year}</span>
+                    </div>
+                  </div>
 
-              <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
-              <hr className="border-t-2 border-white/5 mt-4" />
-              <ul className="flex flex-col gap-4 mt-4">
-                {project.results.map((result) => (
-                  <li className="flex gap-2 text-sm text-white/50">
-                    <CheckCircleIcon className="size-5" />
-                    <span>{result.title}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={project.link}>
-                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                  <span>Visit Live Site</span>
-                  <ArrowUpRightIcon className="size-4 " />
-                </button>
-              </a>
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="mt-8 -mb-4 "
-              />
+                  <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
+                    {project.title}
+                  </h3>
+                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+                  <ul className="flex flex-col gap-4 mt-4 md:mt-5">
+                    {project.results.map((result) => (
+                      <li className="flex gap-2 text-sm md:text-base text-white/50 group">
+                        <CheckCircleIcon className="size-5 md:size-6 group-hover:text-emerald-600 transform duration-200" />
+                        <span className="group-hover:text-emerald-600 transform duration-200">
+                          {result.title}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a href={project.link}>
+                    <button className="bg-white text-gray-950 h-12 w-full  md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 group">
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-4 md:size-5 group-hover:rotate-45 transform duration-200" />
+                    </button>
+                  </a>
+                </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="mt-8 -mb-4 md:mb-0 lg:-mr-72 lg:-mb-20 "
+                />
+              </div>
             </div>
           ))}
         </div>
