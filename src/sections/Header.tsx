@@ -14,6 +14,9 @@ export const Header = () => {
   const [selected, setSelected] = useState<string>("Home");
 
   useEffect(() => {
+
+    if (typeof window === "undefined") return;
+    
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY + window.innerHeight / 3;
