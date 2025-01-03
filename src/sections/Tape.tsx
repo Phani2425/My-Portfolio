@@ -23,13 +23,21 @@ export const TapeSection = () => {
     "Search Optimized",
     "Usable",
     "Reliable",
+    "Secure",
+    "Interactive",
+    "Scalable",
+    "User Friendly",
+    "Maintainable",
+    "Search Optimized",
+    "Usable",
+    "Reliable",
   ];
 
   return (
     <div className="py-16 lg:py-24">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 overflow-x-clip -rotate-3 -mx-0">
         <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_70%,transparent)]">
-          <div className="flex flex-none gap-4">
+          <div className="flex flex-none gap-4 py-3 pr-6 animate-move-left [animation-duration:35s] ">
             {words.map((word) => (
               <div key={word} className="inline-flex items-center gap-4 py-3">
                 <span className="text-gray-900 uppercase font-extrabold text-sm select-none ">

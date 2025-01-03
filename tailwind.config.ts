@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -22,6 +23,27 @@ const config: Config = {
   		}
   	},
   	extend: {
+		animation:{
+			'ping-large': 'ping-large 1s ease-in-out infinite',
+			'move-left': 'move-left 1s linear infinite',
+			'move-right': 'move-right 1s linear infinite'
+		},
+		keyframes:{
+			'ping-large': {
+				'75%, 100%':{
+					transform: 'scale(3)',
+					opacity: '0'
+				}
+			},
+			'move-left' : {
+				'0%': { transform: 'translateX(0)' },
+				'100%': { transform: 'translateX(-50%)' }
+			},
+			'move-right' : {
+				'0%': { transform: 'translateX(-50%)' },
+				'100%': { transform: 'translateX(0)' }
+			},
+		},
   		fontFamily: {
   			sans: 'var(--font-sans)',
   			serif: 'var(--font-serif)'
@@ -72,7 +94,9 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+		  
+		
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,6 +1,6 @@
+'use client'
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import TypeScript from "@/assets/icons/typescript-svgrepo-com.svg";
@@ -13,6 +13,7 @@ import ChromeIcon from "@/assets/icons/chrome.svg";
 
 import MapIndiaImage from "@/assets/images/mapIndia.jpeg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import {motion} from "framer-motion";
 
 import {
   TbBrandNextjs,
@@ -27,6 +28,7 @@ import { SiExpress, SiPostgresql } from "react-icons/si";
 import { BiLogoCPlusPlus } from "react-icons/bi";
 import CardHeader from "@/components/CardHeader";
 import ToolBoxItem from "@/components/ToolBoxItem";
+import { useRef } from "react";
 
 const techStack = [
   { title: "TypeScript", icon: <TbBrandTypescript />, left: "5%", top: "5%" },
@@ -76,8 +78,11 @@ const toolboxItems = [
 ];
 
 export const AboutSection = () => {
+ 
+  const constraintRef = useRef(null);
+
   return (
-    <div className="pt-20 lg:pt-28">
+    <div className="pt-20 lg:pt-28" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
@@ -98,7 +103,7 @@ export const AboutSection = () => {
               </div>
             </Card>
 
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2 ">
               <CardHeader
                 title="My ToolBox"
                 description="Explore the tools I use to craft exceptional digital
@@ -106,33 +111,35 @@ export const AboutSection = () => {
                 className="px-6 pt-6"
               />
 
-              <ToolBoxItem toolboxItems={toolboxItems} className="" />
+              <ToolBoxItem toolboxItems={toolboxItems} className="" itemsWrapperClassName=" animate-move-left [animation-duration:30s]  " />
               <ToolBoxItem
                 toolboxItems={toolboxItems}
                 className="mt-6 "
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:30s] "
               />
             </Card>
 
             <Card className="h-[320px] flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Techs that i work with"
-                description="Explore the techstack i fell in love with.."
+                description="Explore the techstack i fell in love with..(made it as chaotic as I am 🔥)"
                 className=""
               />
 
-              <div className="relative p-1 flex-1">
+              <div className="relative p-1 flex-1" ref={constraintRef}>
                 {techStack.map((item) => (
-                  <div
+                  <motion.div
                     key={item.title}
                     className="inline-flex items-center gap-3 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 py-1.5 rounded-full absolute"
                     style={{ left: item.left, top: item.top }}
+                    drag
+                    dragConstraints={constraintRef}
                   >
                     <span className="font-medium text-gray-950">
                       {item.title}
                     </span>
                     <span className="text-sky-900">{item.icon}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -143,7 +150,10 @@ export const AboutSection = () => {
                 alt="map"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  size-20 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image
                   src={smileMemoji}
                   alt="smileMemoji"
