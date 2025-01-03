@@ -55,7 +55,7 @@ export const TestimonialsSection = () => {
             return (
               <Card
                 key={testimonial.name}
-                className="max-w-xs md:p-8 md:max-w-md"
+                className="max-w-xs p-6 md:p-8 md:max-w-md"
               >
                 <div className="flex gap-4 items-center">
                   <div className="size-14 flex-shrink-0 bg-gray-700 inline-flex items-center justify-center rounded-full overflow-hidden">

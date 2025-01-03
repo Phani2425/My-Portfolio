@@ -1,4 +1,6 @@
 import { AboutSection } from "@/sections/About";
+import { ContactSection } from "@/sections/Contact";
+import { Footer } from "@/sections/Footer";
 import Grid from "@/sections/Grid";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
@@ -15,9 +17,9 @@ export default function Home() {
       <TapeSection/>
       <TestimonialsSection/>
       <AboutSection/>
-      <div className=" p-7 md:p-16 lg:p-24">
       <Grid/>
-      </div>
+      <ContactSection/>
+      <Footer/>
     </div>
   );
 }

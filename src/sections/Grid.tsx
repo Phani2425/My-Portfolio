@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
 
 const Grid = () => {
   return (
-    <section id="about">
+    <section id="about" className=" container">
       <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (
           <BentoGridItem
