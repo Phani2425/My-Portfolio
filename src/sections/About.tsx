@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import bookImage from "@/assets/images/book-cover.png";
@@ -13,7 +13,7 @@ import ChromeIcon from "@/assets/icons/chrome.svg";
 
 import MapIndiaImage from "@/assets/images/mapIndia.jpeg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   TbBrandNextjs,
@@ -78,7 +78,6 @@ const toolboxItems = [
 ];
 
 export const AboutSection = () => {
- 
   const constraintRef = useRef(null);
 
   return (
@@ -111,7 +110,11 @@ export const AboutSection = () => {
                 className="px-6 pt-6"
               />
 
-              <ToolBoxItem toolboxItems={toolboxItems} className="" itemsWrapperClassName=" animate-move-left [animation-duration:30s]  " />
+              <ToolBoxItem
+                toolboxItems={toolboxItems}
+                className=""
+                itemsWrapperClassName=" animate-move-left [animation-duration:30s]  "
+              />
               <ToolBoxItem
                 toolboxItems={toolboxItems}
                 className="mt-6 "
@@ -134,6 +137,9 @@ export const AboutSection = () => {
                     style={{ left: item.left, top: item.top }}
                     drag
                     dragConstraints={constraintRef}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                    whileDrag={{ scale: 1.05 }}
+                    whileTap={{ cursor: "grabbing" }}
                   >
                     <span className="font-medium text-gray-950">
                       {item.title}
@@ -151,9 +157,9 @@ export const AboutSection = () => {
                 className="h-full w-full object-cover"
               />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  size-20 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
 
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image
                   src={smileMemoji}
                   alt="smileMemoji"
