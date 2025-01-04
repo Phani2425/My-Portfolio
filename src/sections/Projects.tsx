@@ -60,7 +60,7 @@ export const ProjectsSection = () => {
             <Card
               key={index}
               className=" px-8 pt-8 pb-0  md:pt-12 md:px-10 lg:pt-16 lg:px-16 sticky"
-              style={{ top: `calc(64px + ${index * 40}px)` }}
+              style={{ top:`calc(64px + ${index * 40}px)` }}
             >
               
               <div className="lg:flex lg:justify-between lg:gap-8">

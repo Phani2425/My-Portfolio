@@ -40,7 +40,7 @@ const Footer = dynamic(
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <Header />
       <HeroSection />
       <ProjectsSection />
