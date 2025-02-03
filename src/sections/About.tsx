@@ -1,16 +1,14 @@
 "use client";
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import bookImage from "@/assets/images/book-cover.png";
+import bookImage from "@/assets/images/words-of-the-mother.jpg";
 import Image from "next/image";
-import TypeScript from "@/assets/icons/typescript-svgrepo-com.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GitHubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
-
 import MapIndiaImage from "@/assets/images/mapIndia.jpeg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { motion } from "framer-motion";
@@ -97,7 +95,7 @@ export const AboutSection = () => {
                 description="Explore the books shaping my perspectives"
               />
 
-              <div className="w-40 mx-auto mt-2 ">
+              <div className="w-40 mx-auto mt-0.5 ">
                 <Image src={bookImage} alt="book" />
               </div>
             </Card>
@@ -150,7 +148,27 @@ export const AboutSection = () => {
               </div>
             </Card>
 
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+            <Card
+              className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1 cursor-pointer"
+              onClick={() => {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                      
+                      const url = `https://www.google.com/maps/place/Centurion+University+of+Technology+%26+Management,+Bhubaneswar+(CUTM)/@20.1759234,85.7036737,17z/data=!3m1!4b1!4m6!3m5!1s0x3a19aec948fe62ef:0xb6c968c7957b6b4f!8m2!3d20.1759184!4d85.7062486!16s%2Fg%2F1v_0h5j9!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D`;
+                      window.open(url, "_blank");
+                    },
+                    () => {
+                      alert(
+                        "Unable to retrieve your location. Please allow location access."
+                      );
+                    }
+                  );
+                } else {
+                  alert("Geolocation is not supported by this browser.");
+                }
+              }}
+            >
               <Image
                 src={MapIndiaImage}
                 alt="map"
