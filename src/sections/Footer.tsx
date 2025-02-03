@@ -11,11 +11,11 @@ const footerLinks = [
   },
   {
     title: "Twitter",
-    url: "#",
+    url: "https://x.com/code_cypher2",
   },
   {
     title: "Resume",
-    url: "#",
+    url: "https://amethyst-suzette-18.tiiny.site",
   },
 ];
 
