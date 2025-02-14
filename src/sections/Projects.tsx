@@ -77,7 +77,7 @@ const portfolioProjects = [
   {
     company: "Personal Project",
     year: "2025",
-    title: "Zapp.ai - Web App Preview Platform",
+    title: "Zapp.ai",
     results: [
       { title: "Developed a Bolt-inspired platform for instant web app previewing and testing" },
       { title: "Implemented real-time code editing with live preview functionality" },
