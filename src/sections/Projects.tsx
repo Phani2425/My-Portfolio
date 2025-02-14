@@ -9,6 +9,7 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import zapp from "@/assets/images/zapp.png"
 
 
 
@@ -73,6 +74,18 @@ const portfolioProjects = [
     link: "https://trimmr-fbpz.vercel.app/",
     image: trimmr, 
   },
+  {
+    company: "Personal Project",
+    year: "2024",
+    title: "Zapp.ai - Web App Preview Platform",
+    results: [
+      { title: "Developed a Bolt-inspired platform for instant web app previewing and testing" },
+      { title: "Implemented real-time code editing with live preview functionality" },
+      { title: "Created a responsive design testing environment with multiple viewport sizes" },
+    ],
+    link: "https://zapp-ai-nssr.vercel.app/",
+    image: zapp, 
+},
   {
     company: "Personal Project",
     year: "2023",

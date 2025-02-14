@@ -7,7 +7,7 @@ const inter = Inter({subsets: ['latin'], variable:'--font-sans'});
 const calistoga = Calistoga({subsets: ['latin'], variable:'--font-serif',weight:["400"]});
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Phani Bhusan | Full Stack Developer",
   description: "Created with a lots of Love ❤️ by Phani Bhusan ",
   icons: {
     icon: '/favicon.png',
