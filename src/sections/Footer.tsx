@@ -15,7 +15,7 @@ const footerLinks = [
   },
   {
     title: "Resume",
-    url: "https://amethyst-suzette-18.tiiny.site",
+    url: "https://purple-helen-83.tiiny.site",
   },
 ];
 
