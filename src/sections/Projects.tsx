@@ -16,7 +16,7 @@ import zapp from "@/assets/images/zapp.png"
 const portfolioProjects = [
   {
     company: "Prominent Newspaper Agency in Odisha",
-    year: "2023",
+    year: "2024",
     title: "Odia Font Converter",
     results: [
       { title: "Enabled seamless font conversion between Akruti, Odia Unicode, and Sreelipi" },
@@ -28,7 +28,7 @@ const portfolioProjects = [
   },
   {
     company: "Personal Project",
-    year: "2023",
+    year: "2024",
     title: "StudyNotion - Ed-Tech Platform",
     results: [
       { title: "Created a fully functional ed-tech platform using the MERN stack" },
@@ -40,7 +40,7 @@ const portfolioProjects = [
   },
   {
     company: "Personal Project",
-    year: "2023",
+    year: "2024",
     title: "SnapSolver - Math Problem Solver",
     results: [
       { title: "Enabled users to solve math problems by drawing or uploading images" },
@@ -52,7 +52,7 @@ const portfolioProjects = [
   },
   {
     company: "Personal Project",
-    year: "2023",
+    year: "2025",
     title: "MarketPlace App",
     results: [
       { title: "Built a full-stack e-commerce app with React, Redux, TypeScript, and Node.js" },
@@ -64,7 +64,7 @@ const portfolioProjects = [
   },
   {
     company: "Personal Project",
-    year: "2023",
+    year: "2025",
     title: "Trimmr - Link Shortener",
     results: [
       { title: "Developed a link-shortening tool with click tracking and analytics" },
@@ -76,7 +76,7 @@ const portfolioProjects = [
   },
   {
     company: "Personal Project",
-    year: "2024",
+    year: "2025",
     title: "Zapp.ai - Web App Preview Platform",
     results: [
       { title: "Developed a Bolt-inspired platform for instant web app previewing and testing" },
@@ -88,7 +88,7 @@ const portfolioProjects = [
 },
   {
     company: "Personal Project",
-    year: "2023",
+    year: "2025",
     title: "BuzzBox - Real-Time Chat Application",
     results: [
       { title: "Built a real-time messaging platform with media sharing and cloud integration" },
