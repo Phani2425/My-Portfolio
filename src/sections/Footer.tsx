@@ -11,11 +11,11 @@ const footerLinks = [
   },
   {
     title: "Twitter",
-    url: "https://x.com/code_cypher2",
+    url: "#",
   },
   {
     title: "Resume",
-    url: "https://purple-helen-83.tiiny.site",
+    url: "#",
   },
 ];
 
